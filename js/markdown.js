@@ -8,6 +8,13 @@ function escapeHTML(value) {
   }[character]));
 }
 
+function getMarkdownBasePath(localPath) {
+  const isProduction = window.location.hostname === 'chenyigeer.github.io';
+  return isProduction
+    ? 'https://raw.githubusercontent.com/ChenYiGeEr/chenyigeer.github.io/main/markdown'
+    : localPath;
+}
+
 function parseMarkdownMetadata(content, filename, index) {
   const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---\n?/);
   const frontMatter = frontMatterMatch ? frontMatterMatch[1] : '';

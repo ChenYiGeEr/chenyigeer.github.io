@@ -9,7 +9,8 @@ async function loadArticle() {
 
     if (!filename) throw new Error('article not found');
 
-    const response = await fetch(`../markdown/${encodeURIComponent(filename)}`);
+    const markdownBasePath = getMarkdownBasePath('../markdown');
+    const response = await fetch(`${markdownBasePath}/${encodeURIComponent(filename)}`);
     if (!response.ok) throw new Error('article unavailable');
 
     const content = await response.text();

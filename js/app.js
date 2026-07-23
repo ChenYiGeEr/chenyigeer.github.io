@@ -70,13 +70,12 @@ function renderArticles() {
 async function loadKnowledgeBase() {
   try {
     const manifestResponse = await fetch('markdown/manifest.json');
-    console.log(manifestResponse)
-    console.log(manifestResponse.ok)
     if (!manifestResponse.ok) throw new Error('manifest unavailable');
 
     const filenames = await manifestResponse.json();
     state.articles = await Promise.all(filenames.map(async (filename, index) => {
-      const response = await fetch(`markdown/${encodeURIComponent(filename)}`);
+      const markdownBasePath = getMarkdownBasePath('markdown');
+      const response = await fetch(`${markdownBasePath}/${encodeURIComponent(filename)}`);
       if (!response.ok) throw new Error(`${filename} unavailable`);
       const content = await response.text();
       return parseMarkdownMetadata(content, filename, index);
