@@ -3,7 +3,7 @@
     .favicon-circle {
       fill: #0b0f12;
       stroke: #8cf7dc;
-      stroke-width: 3;
+      stroke-width: 0;
     }
   </style>
   <defs>
