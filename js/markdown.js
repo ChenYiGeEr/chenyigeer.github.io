@@ -11,7 +11,7 @@ function escapeHTML(value) {
 function getMarkdownBasePath(localPath) {
   const isProduction = window.location.hostname === 'chenyigeer.github.io';
   return isProduction
-    ? 'https://raw.githubusercontent.com/ChenYiGeEr/chenyigeer.github.io/main/markdown'
+    ? 'https://raw.githubusercontent.com/ChenYiGeEr/chenyigeer.github.io/main/' + localPath
     : localPath;
 }
 
