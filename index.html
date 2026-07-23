@@ -1,1 +1,73 @@
-Hello World
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="一个记录技术、思考与个人实验的赛博知识库。" />
+    <title>陈一歌儿</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark">Y</span>
+        <span>陈一歌儿<span class="brand-slash">/</span>LOG</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#archive">文章库</a>
+        <a href="#about">关于我</a>
+        <a href="https://github.com/chenyigeer" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> SYSTEM ONLINE <span class="eyebrow-muted">/ PERSONAL KNOWLEDGE BASE</span></div>
+          <h1 id="hero-title">把思考，<br /><em>编译成光。</em></h1>
+          <p class="hero-intro">这里是我的数字化工作台。记录技术实践、阅读碎片和那些值得反复推敲的私人问题。</p>
+          <div class="hero-actions">
+            <a class="primary-cta" href="#archive">进入知识库 <span>↘</span></a>
+            <a class="text-cta" href="#about">了解这个人 <span>→</span></a>
+          </div>
+        </div>
+        <div class="signal-panel" aria-label="知识库状态">
+          <div class="panel-head"><span>NODE // 01</span><span class="panel-live">● LIVE</span></div>
+          <div class="orbital-mark"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core">Y</div><span class="orbit-dot dot-a"></span><span class="orbit-dot dot-b"></span></div>
+          <div class="signal-lines"><span>MEMORY_INDEX</span><strong>84.7<span>%</span></strong></div>
+          <div class="signal-bar"><i></i></div>
+          <div class="panel-foot"><span>SYNCED 2024 — 2025</span><span>ENCRYPTED / LOCAL</span></div>
+        </div>
+      </section>
+
+      <section class="stats-strip section-wrap" aria-label="知识库统计">
+        <div><span class="stat-label">TOTAL NOTES</span><strong id="totalNotes">06</strong></div>
+        <div><span class="stat-label">TOPIC NODES</span><strong>04</strong></div>
+        <div><span class="stat-label">LAST PULSE</span><strong>2D AGO</strong></div>
+        <div class="stats-aside">“每一次记录，都是给未来自己的接口。”</div>
+      </section>
+
+      <section id="archive" class="archive section-wrap">
+        <div class="section-heading"><div><div class="section-kicker">01 / ARCHIVE</div><h2>最近的信号</h2></div><p>从实践出发，把零散的灵感整理成<br />可检索、可复用的知识单元。</p></div>
+        <div class="archive-tools"><div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="搜索文章、标签或关键词…" /></div><div class="filter-label">FILTER /</div><div id="tagFilters" class="tag-filters"></div></div>
+        <div id="articleGrid" class="article-grid"></div>
+        <div id="emptyState" class="empty-state" hidden>没有找到匹配的信号。</div>
+      </section>
+
+      <section id="about" class="about section-wrap">
+        <div class="section-kicker">02 / OPERATOR</div>
+        <div class="about-layout"><div><h2>你好，我是<br /><span>陈一歌儿。</span></h2></div><div class="about-text"><p>一个在代码、设计与现实生活之间来回切换的人。这个站点不是简历，也不是答案库，更像一张持续生长的思维地图。</p><p>我相信好的知识应该有自己的坐标系。所以我把它们放在这里：让未来的我能找到，也让恰好路过的人带走一点什么。</p><a class="text-cta" href="mailto:hello@chenyigeer.github.io">发送一条信号 <span>↗</span></a></div></div>
+      </section>
+    </main>
+
+    <footer class="footer section-wrap"><span>© 2025 YIGEER / BUILT WITH CURIOSITY</span><span>NO. 001 — KEEP EXPLORING</span></footer>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="./js/markdown.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
